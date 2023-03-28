@@ -5,10 +5,11 @@ def init_window():
     for row in range(3):
         row_list = []
         for col in range(3):
-            row_list.append(sg.Button(key="{0},{1}".format(row, col), button_color="grey", size=(15,10), border_width=1))
+            row_list.append(sg.Button(key="{0},{1}".format(row, col), button_color="grey", size=(20,10), border_width=1))
         layout.append(row_list)
     new_window = sg.Window('Minimax', layout)
     return new_window
+
 
 sg.theme('DarkBlack')
 
