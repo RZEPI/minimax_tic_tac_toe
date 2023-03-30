@@ -27,9 +27,10 @@ while True:
     event, values = window.read()
     if event == 'Start':
         window, layout = init_window(size_of_board)
+        game = Gamepvp.GamePvP(window, size_of_board, 3)
     elif event == sg.WIN_CLOSED:
         break
-    else:
-        pass
+    elif event[0] != "l":
+        game.make_move(event)
 
 window.close()
